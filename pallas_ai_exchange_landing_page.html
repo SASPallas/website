@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pallas Exchange — Secure AI Evaluation & Data-Sharing for Regulated Industries</title>
+  <meta name="description" content="Pallas Exchange is a secure AI evaluation and data-sharing platform for government and regulated organizations to run ML vendor competitions, share sensitive data safely, and accelerate objective procurement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2c;
+      --panel: rgba(14, 26, 43, 0.72);
+      --panel-2: rgba(18, 34, 56, 0.9);
+      --text: #ecf4ff;
+      --muted: #9ab0cc;
+      --line: rgba(255,255,255,0.08);
+      --primary: #7dd3fc;
+      --primary-2: #60a5fa;
+      --accent: #c4b5fd;
+      --success: #86efac;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(125, 211, 252, 0.18), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.16), transparent 30%),
+        radial-gradient(circle at 60% 80%, rgba(196, 181, 253, 0.12), transparent 30%),
+        linear-gradient(180deg, #040b16 0%, #07111f 40%, #091423 100%);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(4, 11, 22, 0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(125,211,252,0.28), rgba(196,181,253,0.24));
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 8px 30px rgba(96,165,250,0.18);
+    }
+
+    .logo::before {
+      content: "◈";
+      color: var(--text);
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: 220ms ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #07111f;
+      box-shadow: 0 12px 35px rgba(96,165,250,0.3);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(125,211,252,0.18);
+      background: rgba(125,211,252,0.08);
+      color: #c7edff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--success);
+      box-shadow: 0 0 18px rgba(134,239,172,0.8);
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 0.96;
+      letter-spacing: -0.045em;
+      max-width: 11ch;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 21px);
+      max-width: 700px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-proof {
+      display: flex;
+      gap: 14px 24px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      color: #c5d9f3;
+      font-size: 14px;
+    }
+
+    .hero-proof span::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--primary);
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(17, 30, 49, 0.88), rgba(10, 20, 34, 0.94));
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -120px auto auto -40px;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(125,211,252,0.18) 0%, transparent 70%);
+    }
+
+    .dashboard {
+      display: grid;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dashboard-top {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+    }
+
+    .mini-card, .metric, .leaderboard, .architecture-box {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .mini-card {
+      padding: 18px;
+    }
+
+    .mini-card h3, .metric h3, .leaderboard h3, .architecture-box h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: #d9e8fb;
+    }
+
+    .mini-card p, .metric p, .leaderboard p, .architecture-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .leaderboard {
+      padding: 18px;
+    }
+
+    .board-list {
+      margin-top: 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .board-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+    }
+
+    .rank {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(125,211,252,0.12);
+      color: #d8f2ff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .score {
+      color: #d8f2ff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    section { padding: 44px 0; }
+
+    .section-head {
+      max-width: 800px;
+      margin-bottom: 26px;
+    }
+
+    .kicker {
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid-3, .grid-4, .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(125,211,252,0.18), rgba(196,181,253,0.16));
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 16px;
+      color: #dff4ff;
+      font-size: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: #07111f;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 10px 30px rgba(96,165,250,0.25);
+    }
+
+    .list-clean {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list-clean li::before {
+      content: "→";
+      color: var(--primary);
+      margin-right: 8px;
+    }
+
+    .architecture {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .architecture-box {
+      padding: 24px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stack-layer {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .stack-layer strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .stack-layer span {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .compliance-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: #d2e4fa;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .demo-shell {
+      display: grid;
+      grid-template-columns: 240px 1fr 320px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .demo-sidebar, .demo-main, .demo-sidepanel {
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .demo-nav {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .demo-nav a, .demo-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #d6e7fb;
+      font-size: 14px;
+    }
+
+    .demo-nav a.active {
+      background: linear-gradient(135deg, rgba(125,211,252,0.16), rgba(196,181,253,0.12));
+      border-color: rgba(125,211,252,0.22);
+    }
+
+    .demo-topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .demo-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .demo-statgrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .demo-stat {
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .demo-stat strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .demo-stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .chart-card {
+      padding: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .chart-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .chart-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .bar-chart {
+      display: grid;
+      gap: 14px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 56px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .bar-track {
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      box-shadow: 0 10px 20px rgba(96,165,250,0.2);
+    }
+
+    .accuracy-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gauge {
+      padding: 18px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+      text-align: center;
+    }
+
+    .gauge-ring {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(var(--primary) 0 var(--val), rgba(255,255,255,0.08) var(--val) 100%);
+      position: relative;
+    }
+
+    .gauge-ring::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 50%;
+      background: #0c1727;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .gauge-ring span {
+      position: relative;
+      z-index: 1;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .demo-sidepanel h3 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .access-list, .duration-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .access-item, .duration-item {
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .small-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .leaderboard-table th {
+      color: #d8e7fb;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(134,239,172,0.12);
+      color: #c8f5d8;
+      border: 1px solid rgba(134,239,172,0.18);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .cta {
+      padding-bottom: 88px;
+    }
+
+    .cta-box {
+      padding: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(125,211,252,0.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(196,181,253,0.16), transparent 26%),
+        linear-gradient(180deg, rgba(18, 31, 51, 0.95), rgba(10, 19, 31, 0.97));
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .cta-box p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 700px;
+    }
+
+    .footer {
+      padding: 24px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .architecture,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .dashboard-top,
+      .cta-box,
+      .demo-shell,
+      .demo-grid,
+      .demo-statgrid,
+      .accuracy-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-row {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { max-width: 100%; }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .nav-actions .btn-secondary { display: none; }
+      .hero { padding-top: 40px; }
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .step { grid-template-columns: 1fr; }
+      .cta-box { padding: 24px; }
+      .hero-actions, .nav-actions { width: 100%; }
+      .hero-actions .btn, .nav-actions .btn { flex: 1 1 auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="logo"></span>
+        <span>Pallas Exchange</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#problem">Why now</a>
+        <a href="#overview">Platform</a>
+        <a href="#demo-page">Demo</a>
+        <a href="#features">Capabilities</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="#demo-page">See How It Works</a>
+        <a class="btn btn-primary" href="#contact">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Secure AI evaluation and data-sharing for government and regulated markets</div>
+          <h1>Secure AI evaluation and data-sharing for regulated industries.</h1>
+          <p class="hero-copy">
+            Pallas Exchange is a trusted AI sandbox from SAS Pallas Analytics that allows government agencies and regulated organizations to safely share datasets with third-party ML developers, enable secure model development and evaluation, and run controlled vendor competitions without letting sensitive data leave the system.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a Demo</a>
+            <a class="btn btn-secondary" href="#demo-page">See How It Works</a>
+          </div>
+          <div class="hero-proof">
+            <span>Sensitive data never leaves the system</span>
+            <span>Controlled vendor competitions</span>
+            <span>Procurement-ready evidence</span>
+          </div>
+        </div>
+
+        <div class="panel hero-card">
+          <div class="dashboard">
+            <div class="dashboard-top">
+              <div class="mini-card">
+                <h3>Active challenge</h3>
+                <p>Detect prohibited items in CT luggage scans using hidden benchmark datasets in a secure compute environment.</p>
+              </div>
+              <div class="mini-card">
+                <h3>Sandbox policy</h3>
+                <p>No raw export · role-based access · activity logging · reproducible evaluation.</p>
+              </div>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric">
+                <strong>42</strong>
+                <p>Qualified vendors invited</p>
+              </div>
+              <div class="metric">
+                <strong>97.3%</strong>
+                <p>Top benchmark accuracy</p>
+              </div>
+              <div class="metric">
+                <strong>18 days</strong>
+                <p>From challenge launch to shortlist</p>
+              </div>
+            </div>
+
+            <div class="leaderboard">
+              <h3>Leaderboard preview</h3>
+              <p>Objective model comparison across accuracy, robustness, and latency.</p>
+              <div class="board-list">
+                <div class="board-row">
+                  <div class="rank">1</div>
+                  <div>
+                    <strong>Sentinel Vision Labs</strong><br>
+                    <span style="color: var(--muted); font-size: 13px;">Container v3.2 · explainability complete</span>
+                  </div>
+                  <div class="score">97.3%</div>
+                </div>
+                <div class="board-row">
+                  <div class="rank">2</div>
+                  <div>
+                    <strong>Northbridge AI</strong><br>
+                    <span style="color: var(--muted); font-size: 13px;">Latency optimized · fairness check passed</span>
+                  </div>
+                  <div class="score">96.8%</div>
+                </div>
+                <div class="board-row">
+                  <div class="rank">3</div>
+                  <div>
+                    <strong>Helios Secure ML</strong><br>
+                    <span style="color: var(--muted); font-size: 13px;">Adversarial resilience above threshold</span>
+                  </div>
+                  <div class="score">95.9%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">The problem</div>
+          <h2>Valuable data exists. Safe external collaboration does not.</h2>
+          <p>Government and regulated organizations have datasets that could dramatically improve AI systems, but they often cannot safely share that data with external vendors. The result is weaker model development, slower procurement, and less competition.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="icon">🧪</div>
+            <h3>Vendors train on inferior data</h3>
+            <p>Without controlled access to real operational datasets, ML vendors often train on synthetic, incomplete, or lower-value data.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📏</div>
+            <h3>Procurement lacks objective testing</h3>
+            <p>AI vendors are too often selected through proposals and demos instead of measurable performance on hidden benchmark datasets.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🏢</div>
+            <h3>Incumbents stay entrenched</h3>
+            <p>When new entrants cannot access secure evaluation environments, agencies remain dependent on large established contractors by default.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⏳</div>
+            <h3>Innovation becomes slow and expensive</h3>
+            <p>Without a trusted AI sandbox, pilots take longer, comparisons are inconsistent, and teams spend more to get less meaningful progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Platform overview</div>
+          <h2>Kaggle for regulated industries — built for real procurement.</h2>
+          <p>Pallas Exchange is a secure AI evaluation and data-sharing platform that combines trusted sandboxed data access, controlled model competitions, automated evaluation, and procurement decision support. It is designed for high-stakes environments where privacy, security, and traceability matter.</p>
+        </div>
+
+        <div class="architecture">
+          <div class="architecture-box">
+            <h3>What the platform enables</h3>
+            <div class="stack">
+              <div class="stack-layer"><strong>Secure data sharing</strong><span>Third-party ML developers work inside controlled sandboxes instead of downloading raw datasets.</span></div>
+              <div class="stack-layer"><strong>ML vendor competitions</strong><span>Agencies publish challenges, collect submissions, and compare models on hidden test data.</span></div>
+              <div class="stack-layer"><strong>Automated model evaluation</strong><span>Score accuracy, bias, robustness, adversarial resilience, explainability, and compute performance.</span></div>
+              <div class="stack-layer"><strong>Procurement dashboard</strong><span>Turn outputs into evaluation reports, benchmarking, and vendor decision artifacts.</span></div>
+              <div class="stack-layer"><strong>Continuous improvement</strong><span>Allow vendors to submit updated versions and re-run evaluation automatically.</span></div>
+            </div>
+          </div>
+          <div class="architecture-box">
+            <h3>Why buyers choose it</h3>
+            <p>Pallas Exchange gives organizations a trusted AI sandbox where developers come to the data, models are evaluated in-place, and only approved outputs leave the environment. That makes innovation possible without weakening security boundaries.</p>
+            <ul class="list-clean">
+              <li>Enable transparent procurement based on measured performance</li>
+              <li>Unlock access for smaller, more specialized AI startups</li>
+              <li>Reduce dependence on legacy contractors</li>
+              <li>Create repeatable competition infrastructure for future procurements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo-page">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Interactive demo page</div>
+          <h2>See how internal teams manage active AI challenges, vendor access, and procurement decisions in real time.</h2>
+          <p>This sample dashboard shows how an agency or regulated organization can track participation, compare top-performing models, manage secure vendor access credentials, and turn evaluation outputs into procurement-ready decisions.</p>
+        </div>
+
+        <div class="demo-shell">
+          <aside class="demo-sidebar">
+            <div class="small-label">Trusted AI sandbox</div>
+            <h3 style="margin:0 0 8px; font-size: 22px;">Challenge Operations</h3>
+            <p style="margin:0; color: var(--muted); font-size: 14px;">Monitor active programs, model performance, and vendor access controls.</p>
+            <div class="demo-nav">
+              <a href="#" class="active"><span>Active Challenges</span><span>04</span></a>
+              <a href="#"><span>Vendor Access</span><span>18</span></a>
+              <a href="#"><span>Leaderboard</span><span>Live</span></a>
+              <a href="#"><span>Evaluation Logs</span><span>286</span></a>
+              <a href="#"><span>Procurement Reports</span><span>12</span></a>
+            </div>
+          </aside>
+
+          <div class="demo-main">
+            <div class="demo-topbar">
+              <div>
+                <div class="small-label">Selected challenge</div>
+                <h3 style="margin:0; font-size: 26px;">CT Baggage Threat Detection</h3>
+                <p style="margin:6px 0 0; color: var(--muted); font-size: 14px;">Agency challenge: detect prohibited items in CT luggage scans using hidden benchmark datasets inside a secure compute environment.</p>
+              </div>
+              <div class="demo-badges">
+                <span class="status-pill">● Live Competition</span>
+                <span class="demo-chip">Duration: 21 days</span>
+                <span class="demo-chip">Approved Vendors: 18</span>
+              </div>
+            </div>
+
+            <div class="demo-statgrid">
+              <div class="demo-stat"><strong>18</strong><span>Approved vendors</span></div>
+              <div class="demo-stat"><strong>14</strong><span>Model submissions this week</span></div>
+              <div class="demo-stat"><strong>97.3%</strong><span>Top benchmark accuracy</span></div>
+              <div class="demo-stat"><strong>82%</strong><span>Vendor participation rate</span></div>
+            </div>
+
+            <div class="demo-grid">
+              <div class="chart-card">
+                <h3>Participation rate by vendor cohort</h3>
+                <p>Track which approved vendors are actively participating so teams can monitor challenge health and identify where support or extensions may be needed.</p>
+                <div class="bar-chart">
+                  <div class="bar-row"><strong>Prime vendors</strong><div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div><span>92%</span></div>
+                  <div class="bar-row"><strong>Startups</strong><div class="bar-track"><div class="bar-fill" style="width: 84%"></div></div><span>84%</span></div>
+                  <div class="bar-row"><strong>Research labs</strong><div class="bar-track"><div class="bar-fill" style="width: 76%"></div></div><span>76%</span></div>
+                  <div class="bar-row"><strong>New entrants</strong><div class="bar-track"><div class="bar-fill" style="width: 64%"></div></div><span>64%</span></div>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <h3>Top-performing model metrics</h3>
+                <p>Easy-to-read visualizations help technical, procurement, and oversight teams compare top models by accuracy and operating profile at a glance.</p>
+                <div class="accuracy-wrap">
+                  <div class="gauge">
+                    <div class="gauge-ring" style="--val: 97.3%"><span>97.3%</span></div>
+                    <strong>Sentinel Vision</strong>
+                    <div style="color: var(--muted); font-size: 13px;">Best overall accuracy</div>
+                  </div>
+                  <div class="gauge">
+                    <div class="gauge-ring" style="--val: 96.8%"><span>96.8%</span></div>
+                    <strong>Northbridge AI</strong>
+                    <div style="color: var(--muted); font-size: 13px;">Lowest latency</div>
+                  </div>
+                  <div class="gauge">
+                    <div class="gauge-ring" style="--val: 95.9%"><span>95.9%</span></div>
+                    <strong>Helios Secure ML</strong>
+                    <div style="color: var(--muted); font-size: 13px;">Highest robustness</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-card" style="margin-top: 18px;">
+              <h3>Leaderboard</h3>
+              <p>Compare top submissions across accuracy, robustness, and latency in one audit-friendly leaderboard built for objective vendor evaluation.</p>
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Vendor</th>
+                    <th>Accuracy</th>
+                    <th>Robustness</th>
+                    <th>Latency</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Sentinel Vision Labs</td>
+                    <td>97.3%</td>
+                    <td>94.8%</td>
+                    <td>132 ms</td>
+                    <td>Approved</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Northbridge AI</td>
+                    <td>96.8%</td>
+                    <td>93.9%</td>
+                    <td>118 ms</td>
+                    <td>Approved</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Helios Secure ML</td>
+                    <td>95.9%</td>
+                    <td>96.1%</td>
+                    <td>146 ms</td>
+                    <td>Approved</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Aegis Compute</td>
+                    <td>94.6%</td>
+                    <td>92.3%</td>
+                    <td>121 ms</td>
+                    <td>Review</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="demo-sidepanel">
+            <h3>Vendor access controls</h3>
+            <p style="margin:0; color: var(--muted); font-size: 14px;">Manage credentials, permission scopes, and competition duration without leaving the procurement dashboard.</p>
+
+            <div class="access-list">
+              <div class="access-item">
+                <div class="small-label">Credential status</div>
+                <strong>18 active vendor accounts</strong>
+                <div style="margin-top: 6px; color: var(--muted); font-size: 13px;">2 pending renewals · 1 MFA reset requested</div>
+              </div>
+              <div class="access-item">
+                <div class="small-label">Permission scope</div>
+                <strong>Controlled sandbox access</strong>
+                <div style="margin-top: 6px; color: var(--muted); font-size: 13px;">No raw export · hidden test sets protected · activity logs enabled</div>
+              </div>
+              <div class="access-item">
+                <div class="small-label">Recent activity</div>
+                <strong>6 new submissions today</strong>
+                <div style="margin-top: 6px; color: var(--muted); font-size: 13px;">4 approved automatically · 2 flagged for review</div>
+              </div>
+            </div>
+
+            <h3 style="margin-top: 22px;">Competition duration</h3>
+            <div class="duration-list">
+              <div class="duration-item">
+                <div class="small-label">Start date</div>
+                <strong>March 3, 2026</strong>
+              </div>
+              <div class="duration-item">
+                <div class="small-label">End date</div>
+                <strong>March 24, 2026</strong>
+              </div>
+              <div class="duration-item">
+                <div class="small-label">Time remaining</div>
+                <strong>11 days</strong>
+                <div style="margin-top: 6px; color: var(--muted); font-size: 13px;">Auto-close enabled · extension approval required</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">How it works</div>
+          <h2>Run secure ML vendor competitions from dataset ingestion to shortlist.</h2>
+          <p>The workflow is designed to support Phase 1 of the roadmap: a trusted AI sandbox where agencies can host secure model competitions, evaluate submissions objectively, and produce procurement-ready outputs.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>Upload datasets into a secure compute environment</h3>
+              <p>Store sensitive data inside a protected environment with version control, privacy protections, access governance, and full activity logging.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>Publish a controlled AI challenge</h3>
+              <p>Define the task, scoring criteria, approved submission types, and competition timeline for vendors participating in the sandbox.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h3>Accept secure model submission and testing</h3>
+              <p>Developers can use secure notebooks, run container execution, or submit Docker containers, model weights, or inference endpoints for evaluation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h3>Generate leaderboard results and procurement artifacts</h3>
+              <p>The platform automatically scores models and feeds results into a procurement dashboard with benchmarking, validation documentation, and shortlist-ready reports.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Capabilities</div>
+          <h2>Everything needed to operate a trusted AI sandbox.</h2>
+          <p>Pallas Exchange supports secure data access, model submission, evaluation, and repeatable vendor competitions in one navigable platform.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">🧱</div>
+            <h3>Secure compute environment</h3>
+            <p>Give vendors controlled access to sensitive datasets without permitting downloads, copying, or unmanaged external handling.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Automated evaluation engine</h3>
+            <p>Run standardized pipelines for accuracy tests, bias checks, robustness checks, adversarial testing, explainability metrics, and compute performance.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🏁</div>
+            <h3>Real-time leaderboards</h3>
+            <p>Rank vendors objectively on hidden test datasets and show performance changes as improved models are submitted.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧾</div>
+            <h3>Procurement-ready reports</h3>
+            <p>Produce evaluation reports, benchmarking summaries, and model validation documentation that support faster procurement decisions.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔁</div>
+            <h3>Continuous model improvement</h3>
+            <p>Allow organizations to re-run evaluation automatically as developers upload updated model versions and improved architectures.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Vendor competition infrastructure</h3>
+            <p>Launch controlled competitions that help agencies discover high-performing vendors and broaden participation beyond incumbents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Roadmap and use cases</div>
+          <h2>Start with vendor competitions. Expand into secure collaboration.</h2>
+          <p>Phase 1 focuses on secure model competitions and objective procurement. Phase 2 expands the same infrastructure into broader internal and external ML collaboration.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="icon">🏁</div>
+            <h3>Phase 1: Vendor competition platform</h3>
+            <p>Government agencies launch secure model competitions to identify the best ML vendors through transparent leaderboards, performance benchmarking, and procurement-ready evaluation artifacts.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🛄</div>
+            <h3>Aviation security example</h3>
+            <p>Run a challenge such as detecting prohibited items in CT luggage scans, where developers submit models and receive scores against hidden benchmark datasets.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Phase 2: Secure data collaboration</h3>
+            <p>Extend the platform to manage sensitive datasets, enable controlled experimentation, and host internal and external model testing on an ongoing basis.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Other regulated markets</h3>
+            <p>Apply the same model to healthcare, critical infrastructure, defense, and other environments where sensitive data must stay protected while innovation continues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Security and governance</div>
+          <h2>Sensitive data never leaves the system.</h2>
+          <p>Pallas Exchange is designed so developers access the environment, not the raw files. Only approved outputs are exported, preserving control while still enabling outside innovation.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Access governance and protected data handling</h3>
+            <p>Use role-based permissions, dataset version control, and complete audit trails to keep data controlled while letting approved vendors work in a governed sandbox.</p>
+            <div class="compliance-pills">
+              <span class="pill">Role-based access</span>
+              <span class="pill">Audit logs</span>
+              <span class="pill">Dataset version control</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">🧪</div>
+            <h3>Privacy-safe technical methods</h3>
+            <p>Support privacy-preserving collaboration using secure enclaves, differential privacy, federated learning patterns, synthetic datasets, and controlled output review.</p>
+            <div class="compliance-pills">
+              <span class="pill">Secure enclaves</span>
+              <span class="pill">Differential privacy</span>
+              <span class="pill">Federated learning</span>
+              <span class="pill">Synthetic datasets</span>
+              <span class="pill">Controlled output review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Architecture</div>
+          <h2>A five-layer platform for evaluation, competition, and collaboration.</h2>
+          <p>The architecture is designed to support both the near-term competition product and the longer-term secure collaboration roadmap.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="architecture-box">
+            <h3>Platform layers</h3>
+            <div class="stack">
+              <div class="stack-layer"><strong>Data layer</strong><span>Protected datasets, metadata, lineage, and version control</span></div>
+              <div class="stack-layer"><strong>Secure compute layer</strong><span>Sandbox workspaces, container execution, secure notebooks</span></div>
+              <div class="stack-layer"><strong>Evaluation layer</strong><span>Accuracy, fairness, robustness, adversarial and explainability testing</span></div>
+              <div class="stack-layer"><strong>Competition layer</strong><span>Challenges, submissions, leaderboards, iteration workflows</span></div>
+              <div class="stack-layer"><strong>Procurement layer</strong><span>Dashboards, reports, vendor shortlists, validation artifacts</span></div>
+            </div>
+          </div>
+
+          <div class="architecture-box">
+            <h3>Strategic outcome</h3>
+            <p>Pallas Exchange turns restricted datasets into a repeatable innovation and procurement system. Agencies can safely invite third-party ML developers into controlled environments, compare performance objectively, and build a more competitive AI ecosystem over time.</p>
+            <ul class="list-clean">
+              <li>Create transparent vendor evaluation processes</li>
+              <li>Support real-time model updates and continuous improvement</li>
+              <li>Shorten vendor selection cycles dramatically</li>
+              <li>Lay the foundation for a future AI innovation marketplace</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="kicker">Final call to action</div>
+            <h2>Open innovation. Protected data. Trusted AI evaluation.</h2>
+            <p>Launch a secure challenge, safely share data through a trusted sandbox, evaluate vendors on real performance, and build a repeatable path from restricted data to faster, more objective procurement.</p>
+          </div>
+          <div class="hero-actions" style="margin-top: 0; justify-content: flex-end;">
+            <a class="btn btn-primary" href="mailto:hello@saspallasanalytics.com">Request Demo</a>
+            <a class="btn btn-secondary" href="mailto:hello@saspallasanalytics.com?subject=Launch%20a%20Secure%20AI%20Challenge">Launch an AI Challenge</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© 2026 SAS Pallas Analytics. Pallas Exchange is secure AI competition infrastructure for regulated industries.</div>
+      <div>Government · Healthcare · Aviation Security · Critical Infrastructure</div>
+    </div>
+  </footer>
+</body>
+</html>
