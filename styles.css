@@ -143,7 +143,9 @@ p {
 .veeva-hero,
 .demo-shell,
 .sandbox-grid,
-.story-grid {
+.story-grid,
+.product-grid,
+.form-grid {
   display: grid;
   gap: 24px;
 }
@@ -241,6 +243,7 @@ h3 {
 .statement-card,
 .feature-card,
 .service-panel,
+.product-card,
 .timeline-step,
 .veeva-panel,
 .demo-card,
@@ -306,8 +309,17 @@ h3 {
 
 .service-layout,
 .sandbox-grid,
-.story-grid {
+.story-grid,
+.product-grid {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.product-card {
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(220, 239, 233, 0.42));
+  border: 1px solid rgba(29, 43, 42, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
 }
 
 .accent-panel {
@@ -412,6 +424,77 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+
+.contact-band-stack {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+}
+
+.contact-copy {
+  max-width: 40rem;
+}
+
+.demo-form {
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 43, 42, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.demo-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.demo-form input,
+.demo-form select,
+.demo-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(29, 43, 42, 0.14);
+  background: rgba(251, 247, 241, 0.92);
+  color: var(--ink);
+  font: inherit;
+}
+
+.demo-form textarea {
+  resize: vertical;
+}
+
+.demo-form input:focus,
+.demo-form select:focus,
+.demo-form textarea:focus {
+  outline: 2px solid rgba(31, 138, 112, 0.18);
+  border-color: rgba(31, 138, 112, 0.45);
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .site-footer {
@@ -597,13 +680,16 @@ h3 {
   .service-layout,
   .sandbox-grid,
   .story-grid,
+  .product-grid,
   .demo-shell,
   .demo-detail-grid,
   .timeline,
   .card-grid-3,
   .preview-body,
   .preview-stat-row,
-  .demo-metrics {
+  .demo-metrics,
+  .contact-band-stack,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -638,7 +724,8 @@ h3 {
   .signal-grid,
   .service-layout,
   .sandbox-grid,
-  .story-grid {
+  .story-grid,
+  .product-grid {
     grid-template-columns: 1fr;
   }
 
