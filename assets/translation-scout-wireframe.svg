@@ -1,0 +1,137 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Translation Scout wireframe</title>
+  <desc id="desc">Wireframe for a publishing intelligence product showing a scouting workspace with territory lists on the left, ranked foreign titles in the center, and a right-side editorial recommendation panel.</desc>
+  <style>
+    .bg { fill: #f7f9fc; }
+    .panel { fill: #ffffff; stroke: #d7deea; stroke-width: 1.5; }
+    .soft { fill: #eef3fb; stroke: #d7deea; stroke-width: 1.5; }
+    .active { fill: #e7f0ff; stroke: #7ea8e6; stroke-width: 2; }
+    .ink { fill: #17324d; }
+    .muted { fill: #5b6f86; }
+    .line { stroke: #d7deea; stroke-width: 1.5; }
+    .accent { fill: #2c6bdb; }
+    .serif { font-family: Georgia, 'Times New Roman', serif; }
+    .sans { font-family: Arial, Helvetica, sans-serif; }
+    .title { font-size: 22px; font-weight: 700; }
+    .hero { font-size: 42px; font-weight: 700; }
+    .section { font-size: 18px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  </style>
+
+  <rect class="bg" width="1600" height="980"/>
+
+  <rect x="52" y="42" width="1496" height="84" rx="22" class="panel"/>
+  <text x="92" y="76" class="sans muted tiny">Pallas Analytics / Translation Scout</text>
+  <text x="92" y="108" class="serif ink title">Cross-market scouting workspace</text>
+  <rect x="1236" y="62" width="268" height="44" rx="22" class="soft"/>
+  <text x="1304" y="90" class="sans ink body">Start walkthrough</text>
+
+  <rect x="52" y="148" width="1496" height="108" rx="24" class="panel"/>
+  <text x="92" y="186" class="sans muted tiny">Signal snapshot</text>
+  <rect x="92" y="202" width="204" height="32" rx="16" class="soft"/>
+  <text x="112" y="223" class="sans ink small">142 titles screened</text>
+  <rect x="314" y="202" width="192" height="32" rx="16" class="soft"/>
+  <text x="334" y="223" class="sans ink small">18 escalated for read</text>
+  <rect x="524" y="202" width="184" height="32" rx="16" class="soft"/>
+  <text x="544" y="223" class="sans ink small">11 high-overlap matches</text>
+  <rect x="726" y="202" width="210" height="32" rx="16" class="soft"/>
+  <text x="746" y="223" class="sans ink small">6 coverage spike alerts</text>
+  <text x="1018" y="194" class="serif ink title">Find the books most likely to travel well into English.</text>
+  <text x="1018" y="224" class="sans muted body">Map critic overlap, market response, and editorial fit in one ranked view.</text>
+
+  <rect x="52" y="282" width="250" height="642" rx="24" class="panel"/>
+  <text x="88" y="324" class="sans muted tiny">Scouting lists</text>
+  <rect x="80" y="348" width="194" height="54" rx="18" class="active"/>
+  <text x="102" y="372" class="sans ink small">French spring list</text>
+  <text x="102" y="392" class="sans muted small">34 active titles</text>
+  <rect x="80" y="418" width="194" height="54" rx="18" class="soft"/>
+  <text x="102" y="442" class="sans ink small">German fiction watch</text>
+  <text x="102" y="462" class="sans muted small">22 active titles</text>
+  <rect x="80" y="488" width="194" height="54" rx="18" class="soft"/>
+  <text x="102" y="512" class="sans ink small">Spanish breakout list</text>
+  <text x="102" y="532" class="sans muted small">19 active titles</text>
+  <line x1="80" y1="574" x2="274" y2="574" class="line"/>
+  <text x="88" y="610" class="sans muted tiny">Views</text>
+  <text x="88" y="646" class="sans ink small">High travel fit</text>
+  <text x="88" y="680" class="sans ink small">Strong critic overlap</text>
+  <text x="88" y="714" class="sans ink small">Needs editor review</text>
+  <text x="88" y="748" class="sans ink small">Low-confidence signals</text>
+  <line x1="80" y1="784" x2="274" y2="784" class="line"/>
+  <text x="88" y="820" class="sans muted tiny">Shortlists</text>
+  <text x="88" y="856" class="sans ink small">US editors</text>
+  <text x="88" y="890" class="sans ink small">UK editors</text>
+
+  <rect x="326" y="282" width="776" height="642" rx="24" class="panel"/>
+  <text x="364" y="324" class="sans muted tiny">Ranked results</text>
+  <text x="364" y="360" class="serif ink title">French spring list</text>
+  <rect x="838" y="328" width="226" height="38" rx="19" class="soft"/>
+  <text x="862" y="352" class="sans ink small">Filter: literary fiction</text>
+
+  <line x1="364" y1="392" x2="1064" y2="392" class="line"/>
+  <text x="364" y="418" class="sans muted tiny">Title</text>
+  <text x="584" y="418" class="sans muted tiny">Territory</text>
+  <text x="684" y="418" class="sans muted tiny">Travel fit</text>
+  <text x="804" y="418" class="sans muted tiny">Critic overlap</text>
+  <text x="958" y="418" class="sans muted tiny">Coverage</text>
+
+  <rect x="350" y="436" width="728" height="76" rx="18" class="active"/>
+  <text x="378" y="466" class="sans ink body">The Silence Archive / M. Laurent</text>
+  <text x="378" y="490" class="sans muted small">Comparable to intimate, formally controlled literary fiction with strong review language around voice.</text>
+  <text x="584" y="466" class="sans ink small">France</text>
+  <text x="684" y="466" class="sans ink small">High</text>
+  <text x="804" y="466" class="sans ink small">9 aligned critics</text>
+  <text x="958" y="466" class="sans ink small">Rising</text>
+
+  <rect x="350" y="526" width="728" height="76" rx="18" class="soft"/>
+  <text x="378" y="556" class="sans ink body">At the Glass Orchard / S. Vernet</text>
+  <text x="378" y="580" class="sans muted small">Strong local attention, but weaker overlap with trusted English-language taste cluster.</text>
+  <text x="584" y="556" class="sans ink small">France</text>
+  <text x="684" y="556" class="sans ink small">Medium</text>
+  <text x="804" y="556" class="sans ink small">4 aligned critics</text>
+  <text x="958" y="556" class="sans ink small">Stable</text>
+
+  <rect x="350" y="616" width="728" height="76" rx="18" class="soft"/>
+  <text x="378" y="646" class="sans ink body">Blue Weather Rooms / I. Caron</text>
+  <text x="378" y="670" class="sans muted small">Admired for ambition, though the current pattern suggests lower transatlantic fit.</text>
+  <text x="584" y="646" class="sans ink small">France</text>
+  <text x="684" y="646" class="sans ink small">Low</text>
+  <text x="804" y="646" class="sans ink small">2 aligned critics</text>
+  <text x="958" y="646" class="sans ink small">Mixed</text>
+
+  <line x1="364" y1="734" x2="1064" y2="734" class="line"/>
+  <text x="364" y="768" class="sans muted tiny">Editorial prompts</text>
+  <rect x="364" y="786" width="208" height="36" rx="18" class="soft"/>
+  <text x="388" y="809" class="sans ink small">Escalate for editor read</text>
+  <rect x="590" y="786" width="176" height="36" rx="18" class="soft"/>
+  <text x="614" y="809" class="sans ink small">Compare titles</text>
+  <rect x="784" y="786" width="184" height="36" rx="18" class="soft"/>
+  <text x="808" y="809" class="sans ink small">Save to shortlist</text>
+
+  <rect x="1126" y="282" width="422" height="642" rx="24" class="panel"/>
+  <text x="1164" y="324" class="sans muted tiny">Editorial recommendation</text>
+  <text x="1164" y="360" class="serif ink title">The Silence Archive</text>
+  <text x="1164" y="388" class="sans muted body">France / literary fiction / selected from French spring list</text>
+
+  <rect x="1164" y="420" width="346" height="72" rx="18" class="soft"/>
+  <text x="1188" y="448" class="sans ink small">Recommendation</text>
+  <text x="1188" y="474" class="sans muted small">Escalate for editor read. Strong overlap with trusted US/UK reviewers and a clear comparable-title path.</text>
+
+  <text x="1164" y="536" class="sans muted tiny">Why it surfaced</text>
+  <text x="1164" y="570" class="sans ink body">9 critics with overlap to trusted English-language taste clusters</text>
+  <text x="1164" y="606" class="sans ink body">Review language clusters around voice, restraint, and formal control</text>
+  <text x="1164" y="642" class="sans ink body">Recent momentum spike across three high-signal outlets</text>
+
+  <line x1="1164" y1="684" x2="1510" y2="684" class="line"/>
+  <text x="1164" y="716" class="sans muted tiny">Comparable titles</text>
+  <text x="1164" y="750" class="sans ink small">Quietly ambitious translated literary fiction</text>
+  <text x="1164" y="780" class="sans ink small">Reviewers responsive to intimate, formally precise prose</text>
+
+  <line x1="1164" y1="822" x2="1510" y2="822" class="line"/>
+  <text x="1164" y="854" class="sans muted tiny">Next step</text>
+  <rect x="1164" y="872" width="168" height="36" rx="18" class="active"/>
+  <text x="1188" y="895" class="sans ink small">Send to editor</text>
+  <rect x="1350" y="872" width="160" height="36" rx="18" class="soft"/>
+  <text x="1380" y="895" class="sans ink small">Save note</text>
+</svg>

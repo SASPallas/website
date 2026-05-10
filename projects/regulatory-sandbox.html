@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="../styles.css" />
@@ -26,12 +26,12 @@
       <nav class="nav-links">
         <a href="../index.html">Home</a>
         <a href="#outcomes">Outcomes</a>
-        <a href="#what-it-does">What It Does</a>
+        <a href="#what-it-does">Inside the System</a>
         <a href="#request-demo">Request Demo</a>
       </nav>
       <div class="nav-actions">
         <a class="btn btn-ghost" href="../index.html#products">Back to Products</a>
-        <a class="btn btn-primary" href="#request-demo">Request a Demo</a>
+        <a class="btn btn-primary" href="#request-demo">Request a Walkthrough</a>
       </div>
     </div>
   </header>
@@ -46,8 +46,8 @@
             This is a governed model evaluation environment for regulated teams. It is designed to let quality, compliance, regulatory, and oversight leaders compare models, protect sensitive inputs, and produce evidence that can support approval, procurement, and accountable deployment decisions.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#request-demo">Request a Demo</a>
-            <a class="btn btn-secondary" href="#what-it-does">See What It Does</a>
+            <a class="btn btn-primary" href="#request-demo">Request a Walkthrough</a>
+            <a class="btn btn-secondary" href="#what-it-does">See Inside the System</a>
           </div>
         </div>
 
@@ -149,39 +149,10 @@
           </aside>
 
           <div class="demo-main">
-            <article class="demo-card">
-              <div class="demo-header">
-                <div>
-                  <p class="mini-kicker">Sample workflow</p>
-                  <h3>Benchmark testing on protected data</h3>
-                  <p>Illustrative workflow for evaluating candidate models against a fixed benchmark while keeping sensitive inputs and scoring logic inside a governed environment.</p>
-                </div>
-                <div class="demo-pills">
-                  <span>Protected test sets</span>
-                  <span>Consistent scoring</span>
-                  <span>Comparable submissions</span>
-                </div>
-              </div>
-
-              <div class="demo-metrics">
-                <article>
-                  <strong>1</strong>
-                  <span>Benchmark definition</span>
-                </article>
-                <article>
-                  <strong>Many</strong>
-                  <span>Submissions reviewed consistently</span>
-                </article>
-                <article>
-                  <strong>Protected</strong>
-                  <span>Data and scoring logic</span>
-                </article>
-                <article>
-                  <strong>Traceable</strong>
-                  <span>Evaluation history</span>
-                </article>
-              </div>
-            </article>
+            <figure class="visual-card">
+              <img src="../assets/sandbox-wireframe.svg" alt="Wireframe of the regulatory sandbox showing benchmark setup, submissions, results, controlled review, and an evidence package workspace." />
+              <figcaption>First-pass demo wireframe for the governed evaluation workspace. The sandbox is designed for comparable results, controlled review, and decision-ready evidence rather than public competition.</figcaption>
+            </figure>
 
             <div class="demo-detail-grid">
               <article class="demo-card">
@@ -228,12 +199,7 @@
             Tell us what type of model review, vendor comparison, or deployment decision you want to explore. We’ll respond with a tailored demo or proof-of-concept link.
           </p>
         </div>
-        <form
-          class="demo-form js-demo-form"
-          data-user="hello"
-          data-domain="saspallasanalytics.com"
-          data-subject="Regulated Model Environment Demo Request"
-        >
+        <form class="demo-form js-demo-form">
           <div class="form-grid">
             <label>
               <span>Name</span>
@@ -272,6 +238,7 @@
     </div>
   </footer>
 
+  <script src="../site-config.js"></script>
   <script src="../script.js"></script>
 </body>
 </html>

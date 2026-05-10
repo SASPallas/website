@@ -1,0 +1,83 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SDLC flywheel with integrated ML development loop</title>
+  <desc id="desc">A minimal flywheel diagram showing the larger software delivery lifecycle and a smaller machine learning loop that feeds back into development, emphasizing faster regulated iteration.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1L8 5L1 9V1Z" fill="#2757A5"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1L8 5L1 9V1Z" fill="#1F7A73"/>
+    </marker>
+    <style>
+      .sans { font-family: "Inter", "Segoe UI", Arial, sans-serif; }
+      .serif { font-family: "Iowan Old Style", Georgia, serif; }
+      .ink { fill: #16283D; }
+      .muted { fill: #627286; }
+      .blue { stroke: #2757A5; }
+      .teal { stroke: #1F7A73; }
+      .label { fill: #16283D; font-size: 23px; font-weight: 600; }
+      .small { fill: #627286; font-size: 16px; font-weight: 500; }
+      .header { fill: #16283D; font-size: 50px; font-weight: 700; }
+      .sub { fill: #627286; font-size: 21px; font-weight: 500; }
+      .eyebrow { fill: #2757A5; font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+      .center-a { fill: #4E6280; font-size: 18px; font-weight: 600; }
+      .center-b { fill: #16283D; font-size: 34px; font-weight: 700; }
+      .center-c { fill: #2757A5; font-size: 20px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" fill="#FCFDFE"/>
+
+  <text x="120" y="110" class="sans eyebrow">PALLAS ANALYTICS</text>
+  <text x="120" y="170" class="serif header">A cleaner flywheel for regulated delivery.</text>
+  <text x="120" y="208" class="sans sub">The ML loop is separate, but it returns into development inside the larger SDLC.</text>
+
+  <g>
+    <circle cx="610" cy="520" r="240" stroke="#D8E2EF" stroke-width="24"/>
+    <path d="M607 281C713 280 809 322 877 392" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M889 410C940 485 953 576 923 663" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M910 686C853 763 764 811 666 825" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M638 826C536 829 438 791 367 723" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M349 704C290 628 271 532 294 440" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M309 416C360 337 444 288 539 281" class="blue" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+
+    <circle cx="610" cy="520" r="118" fill="#FFFFFF" stroke="#E8EEF6" stroke-width="1.5"/>
+    <text x="610" y="500" text-anchor="middle" class="sans center-a">Pallas reduces</text>
+    <text x="610" y="540" text-anchor="middle" class="serif center-b">cycle time</text>
+    <text x="610" y="574" text-anchor="middle" class="sans center-c">without losing control</text>
+  </g>
+
+  <g class="sans label">
+    <text x="608" y="220" text-anchor="middle">Plan / Requirements</text>
+    <text x="930" y="390" text-anchor="start">Design</text>
+    <text x="906" y="674" text-anchor="start">Develop</text>
+    <text x="610" y="868" text-anchor="middle">Validate / Test</text>
+    <text x="182" y="666" text-anchor="start">Deploy</text>
+    <text x="124" y="384" text-anchor="start">Monitor / Improve</text>
+  </g>
+
+  <g>
+    <circle cx="1086" cy="496" r="126" stroke="#D8ECE8" stroke-width="20"/>
+    <path d="M1085 370C1140 371 1191 393 1228 430" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <path d="M1237 447C1266 501 1266 567 1235 621" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <path d="M1218 638C1177 682 1117 704 1058 699" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <path d="M1038 692C986 675 942 636 921 585" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <path d="M916 562C907 507 921 448 956 404" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <path d="M973 389C1007 372 1046 366 1082 370" class="teal" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+
+    <text x="1086" y="503" text-anchor="middle" class="sans" style="fill:#1F7A73;font-size:20px;font-weight:700;">ML development</text>
+  </g>
+
+  <g class="sans small">
+    <text x="1078" y="328" text-anchor="middle">Data prep</text>
+    <text x="1268" y="444" text-anchor="start">Train</text>
+    <text x="1256" y="640" text-anchor="start">Evaluate</text>
+    <text x="1030" y="742" text-anchor="middle">Refine</text>
+    <text x="885" y="562" text-anchor="end">Review</text>
+  </g>
+
+  <g>
+    <path d="M944 496C900 548 860 601 816 654" stroke="#1F7A73" stroke-width="4" stroke-dasharray="7 9" marker-end="url(#arrow-teal)"/>
+    <text x="972" y="760" class="sans small">ML loop re-enters the main cycle at develop.</text>
+  </g>
+</svg>

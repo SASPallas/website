@@ -1,0 +1,201 @@
+<svg width="1600" height="1040" viewBox="0 0 1600 1040" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Regulatory Sandbox Wireframe</title>
+  <desc id="desc">Minimal wireframe for a governed model evaluation workspace with benchmark setup, submissions, results, controlled review, and evidence package output.</desc>
+  <style>
+    .bg { fill: #F7F9FC; }
+    .panel { fill: #FFFFFF; stroke: #CDD6E2; stroke-width: 1.5; }
+    .heavy { stroke: #223247; stroke-width: 1.5; }
+    .rule { stroke: #D8E0EA; stroke-width: 1; }
+    .blue { fill: #EAF1FF; stroke: #AAC0F0; stroke-width: 1.25; }
+    .teal { fill: #E8F6F4; stroke: #9FD5CC; stroke-width: 1.25; }
+    .amber { fill: #FFF4E6; stroke: #E6C795; stroke-width: 1.25; }
+    .ink { fill: #223247; font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .muted { fill: #5E7187; font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .mono { fill: #42546A; font-family: "SFMono-Regular", ui-monospace, "Cascadia Code", monospace; }
+    .h1 { font-size: 28px; font-weight: 650; }
+    .h2 { font-size: 19px; font-weight: 640; }
+    .h3 { font-size: 16px; font-weight: 630; }
+    .label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .body { font-size: 14px; font-weight: 500; }
+    .small { font-size: 12px; font-weight: 500; }
+    .metric { font-size: 24px; font-weight: 650; }
+    .tiny { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1040"/>
+
+  <rect class="panel" x="24" y="20" width="1552" height="86" rx="16"/>
+  <text class="muted label" x="56" y="52">Governed evaluation workspace</text>
+  <text class="ink h1" x="56" y="84">Cell Orchestration Platform Model Review</text>
+  <rect class="blue" x="1128" y="36" width="122" height="34" rx="17"/>
+  <text class="ink small" x="1160" y="58">Benchmark locked</text>
+  <rect class="teal" x="1264" y="36" width="120" height="34" rx="17"/>
+  <text class="ink small" x="1298" y="58">Review active</text>
+  <rect class="amber" x="1398" y="36" width="132" height="34" rx="17"/>
+  <text class="ink small" x="1424" y="58">Decision pending</text>
+  <text class="mono small" x="1128" y="90">Workspace ID  COP-VAL-2041</text>
+  <text class="mono small" x="1336" y="90">Benchmark  B-07 / Hidden test set / Rev 4</text>
+
+  <rect class="panel" x="24" y="126" width="232" height="878" rx="18"/>
+  <text class="muted label" x="52" y="162">Workspace</text>
+
+  <rect class="blue" x="42" y="186" width="196" height="74" rx="14"/>
+  <text class="ink h3" x="60" y="213">1  Benchmark setup</text>
+  <text class="muted small" x="60" y="236">Task set, scoring logic,</text>
+  <text class="muted small" x="60" y="254">review criteria</text>
+
+  <rect class="panel" x="42" y="274" width="196" height="74" rx="14"/>
+  <text class="ink h3" x="60" y="301">2  Submissions</text>
+  <text class="muted small" x="60" y="324">Candidate models,</text>
+  <text class="muted small" x="60" y="342">vendor and internal runs</text>
+
+  <rect class="panel" x="42" y="362" width="196" height="74" rx="14"/>
+  <text class="ink h3" x="60" y="389">3  Results</text>
+  <text class="muted small" x="60" y="412">Scorecard, variance,</text>
+  <text class="muted small" x="60" y="430">failure modes</text>
+
+  <rect class="panel" x="42" y="450" width="196" height="74" rx="14"/>
+  <text class="ink h3" x="60" y="477">4  Controlled review</text>
+  <text class="muted small" x="60" y="500">Validation, compliance,</text>
+  <text class="muted small" x="60" y="518">oversight comments</text>
+
+  <rect class="panel" x="42" y="538" width="196" height="74" rx="14"/>
+  <text class="ink h3" x="60" y="565">5  Evidence package</text>
+  <text class="muted small" x="60" y="588">Decision memo, controls,</text>
+  <text class="muted small" x="60" y="606">sign-off packet</text>
+
+  <line class="rule" x1="42" y1="646" x2="238" y2="646"/>
+  <text class="muted label" x="52" y="680">Signals</text>
+  <text class="body muted" x="52" y="708">FDA GxP logic</text>
+  <text class="body muted" x="52" y="736">EU GxP logic</text>
+  <text class="body muted" x="52" y="764">Retention rules</text>
+  <text class="body muted" x="52" y="792">Deviation flags</text>
+  <text class="body muted" x="52" y="820">Audit trail</text>
+
+  <line class="rule" x1="42" y1="852" x2="238" y2="852"/>
+  <text class="muted label" x="52" y="886">Current gate</text>
+  <text class="ink h3" x="52" y="916">Technical review complete</text>
+  <text class="muted body" x="52" y="942">Waiting on compliance disposition</text>
+
+  <rect class="panel" x="276" y="126" width="896" height="878" rx="18"/>
+  <text class="muted label" x="308" y="162">Main Workspace</text>
+
+  <rect class="panel" x="300" y="184" width="400" height="210" rx="16"/>
+  <text class="ink h2" x="326" y="216">Benchmark setup</text>
+  <text class="muted body" x="326" y="244">Hidden benchmark aligned to validation scope and acceptance criteria.</text>
+  <line class="rule" x1="326" y1="264" x2="674" y2="264"/>
+  <text class="muted tiny" x="326" y="292">Task set</text>
+  <text class="ink body" x="326" y="314">18 adjudicated prompts / 6 edge-case scenarios</text>
+  <text class="muted tiny" x="326" y="342">Scoring logic</text>
+  <text class="ink body" x="326" y="364">Accuracy, explanation quality, escalation behavior</text>
+  <text class="muted tiny" x="326" y="392">Acceptance rule</text>
+  <text class="ink body" x="326" y="414">No critical failures and score above controlled threshold</text>
+
+  <rect class="panel" x="720" y="184" width="428" height="210" rx="16"/>
+  <text class="ink h2" x="746" y="216">Submission intake</text>
+  <text class="muted body" x="746" y="244">Each run is normalized into a comparable package before scoring.</text>
+  <line class="rule" x1="746" y1="264" x2="1122" y2="264"/>
+  <text class="muted tiny" x="746" y="292">Selected run</text>
+  <text class="ink body" x="746" y="314">Vendor B / Retrieval model / Run 14</text>
+  <text class="muted tiny" x="746" y="342">Input controls</text>
+  <text class="ink body" x="746" y="364">Protected prompt set, masked records, fixed temperature</text>
+  <text class="muted tiny" x="746" y="392">Package state</text>
+  <text class="ink body" x="746" y="414">Scored, reviewed, ready for compliance comment</text>
+
+  <rect class="panel" x="300" y="414" width="848" height="236" rx="16"/>
+  <text class="ink h2" x="326" y="446">Results matrix</text>
+  <text class="muted body" x="326" y="474">Benchmark outcomes stay comparable across candidate models and repeat runs.</text>
+  <line class="rule" x1="326" y1="494" x2="1122" y2="494"/>
+
+  <text class="muted tiny" x="326" y="524">Submission</text>
+  <text class="muted tiny" x="564" y="524">Overall</text>
+  <text class="muted tiny" x="674" y="524">Critical failures</text>
+  <text class="muted tiny" x="838" y="524">Review state</text>
+  <text class="muted tiny" x="996" y="524">Decision signal</text>
+
+  <line class="rule" x1="326" y1="540" x2="1122" y2="540"/>
+  <text class="ink body" x="326" y="568">Internal baseline / Run 07</text>
+  <text class="ink body" x="564" y="568">81</text>
+  <text class="ink body" x="700" y="568">1</text>
+  <text class="ink body" x="838" y="568">Reviewed</text>
+  <text class="ink body" x="996" y="568">Conditional</text>
+
+  <line class="rule" x1="326" y1="584" x2="1122" y2="584"/>
+  <text class="ink body" x="326" y="612">Vendor A / Run 11</text>
+  <text class="ink body" x="564" y="612">84</text>
+  <text class="ink body" x="700" y="612">0</text>
+  <text class="ink body" x="838" y="612">Approved</text>
+  <text class="ink body" x="996" y="612">Advance</text>
+
+  <line class="rule" x1="326" y1="628" x2="1122" y2="628"/>
+  <text class="ink body" x="326" y="656">Vendor B / Run 14</text>
+  <text class="ink body" x="564" y="656">87</text>
+  <text class="ink body" x="700" y="656">0</text>
+  <text class="ink body" x="838" y="656">In review</text>
+  <text class="ink body" x="996" y="656">Preferred</text>
+
+  <rect class="blue" x="930" y="438" width="192" height="38" rx="12"/>
+  <text class="ink small" x="965" y="462">Benchmark variance within band</text>
+
+  <rect class="panel" x="300" y="670" width="404" height="306" rx="16"/>
+  <text class="ink h2" x="326" y="702">Controlled review</text>
+  <text class="muted body" x="326" y="730">Comments are separated by role and tied to the same scored record.</text>
+  <line class="rule" x1="326" y1="750" x2="678" y2="750"/>
+  <text class="muted tiny" x="326" y="780">Validation</text>
+  <text class="ink body" x="326" y="802">Failure analysis reviewed. No protocol deviations.</text>
+  <text class="muted tiny" x="326" y="836">Compliance</text>
+  <text class="ink body" x="326" y="858">Needs retention mapping for exported logs.</text>
+  <text class="muted tiny" x="326" y="892">Oversight</text>
+  <text class="ink body" x="326" y="914">Acceptable if evidence package includes approval rationale.</text>
+  <rect class="amber" x="326" y="934" width="226" height="28" rx="10"/>
+  <text class="ink small" x="348" y="953">Open comment blocks final disposition</text>
+
+  <rect class="panel" x="724" y="670" width="424" height="306" rx="16"/>
+  <text class="ink h2" x="750" y="702">Evidence package</text>
+  <text class="muted body" x="750" y="730">Decision-ready output built from the scored run and review trail.</text>
+  <line class="rule" x1="750" y1="750" x2="1122" y2="750"/>
+  <text class="muted tiny" x="750" y="780">Included</text>
+  <text class="ink body" x="750" y="802">Benchmark description</text>
+  <text class="ink body" x="750" y="832">Submission metadata</text>
+  <text class="ink body" x="750" y="862">Score summary and failure log</text>
+  <text class="ink body" x="750" y="892">Reviewer comments and disposition</text>
+  <text class="ink body" x="750" y="922">Approval memo and next controls</text>
+  <rect class="teal" x="750" y="936" width="166" height="28" rx="10"/>
+  <text class="ink small" x="780" y="955">Packet ready to export</text>
+
+  <rect class="panel" x="1192" y="126" width="384" height="878" rx="18"/>
+  <text class="muted label" x="1224" y="162">Decision panel</text>
+
+  <rect class="panel" x="1216" y="184" width="336" height="114" rx="14"/>
+  <text class="muted tiny" x="1240" y="212">Current submission</text>
+  <text class="ink h2" x="1240" y="244">Vendor B / Run 14</text>
+  <text class="ink metric" x="1240" y="286">87</text>
+  <text class="muted body" x="1294" y="286">overall governed score</text>
+
+  <rect class="panel" x="1216" y="318" width="336" height="198" rx="14"/>
+  <text class="ink h2" x="1240" y="350">Decision checklist</text>
+  <line class="rule" x1="1240" y1="370" x2="1528" y2="370"/>
+  <text class="ink body" x="1240" y="402">✓ Benchmark protocol fixed</text>
+  <text class="ink body" x="1240" y="434">✓ Critical failures reviewed</text>
+  <text class="ink body" x="1240" y="466">✓ Technical sign-off complete</text>
+  <text class="ink body" x="1240" y="498">○ Compliance disposition open</text>
+
+  <rect class="panel" x="1216" y="536" width="336" height="180" rx="14"/>
+  <text class="ink h2" x="1240" y="568">Jurisdiction logic</text>
+  <line class="rule" x1="1240" y1="588" x2="1528" y2="588"/>
+  <text class="ink body" x="1240" y="620">FDA GxP: evidence chain complete</text>
+  <text class="ink body" x="1240" y="652">EU GxP: reviewer role mapping present</text>
+  <text class="ink body" x="1240" y="684">Retention: export logs not assigned</text>
+
+  <rect class="panel" x="1216" y="736" width="336" height="240" rx="14"/>
+  <text class="ink h2" x="1240" y="768">Decision output</text>
+  <line class="rule" x1="1240" y1="788" x2="1528" y2="788"/>
+  <text class="ink body" x="1240" y="820">Recommendation</text>
+  <text class="ink h3" x="1240" y="848">Advance with conditions</text>
+  <text class="muted body" x="1240" y="878">Release evidence package after</text>
+  <text class="muted body" x="1240" y="900">retention mapping is attached.</text>
+  <rect class="blue" x="1240" y="924" width="132" height="30" rx="11"/>
+  <text class="ink small" x="1270" y="944">Export packet</text>
+  <rect class="panel" x="1388" y="924" width="140" height="30" rx="11"/>
+  <text class="ink small" x="1420" y="944">Send to approvers</text>
+</svg>

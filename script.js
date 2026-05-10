@@ -3,32 +3,72 @@ document.querySelectorAll(".js-demo-form").forEach((form) => {
     event.preventDefault();
 
     const data = new FormData(form);
-    const user = form.dataset.user || "hello";
-    const domain = form.dataset.domain || "saspallasanalytics.com";
-    const subject = form.dataset.subject || "Demo Request";
+    const endpoint =
+      form.dataset.endpoint ||
+      window.PALLAS_API_ENDPOINT ||
+      "";
 
-    const name = data.get("name") || "";
-    const organization = data.get("organization") || "";
-    const email = data.get("email") || "";
-    const product = data.get("product") || "";
-    const useCase = data.get("use_case") || "";
+    if (!endpoint || endpoint.includes("YOUR-VERCEL-PROJECT")) {
+      const note = form.querySelector(".form-note");
+      if (note) {
+        note.textContent =
+          "Demo request backend is not configured yet. Add your Vercel endpoint in site-config.js.";
+      }
+      return;
+    }
 
-    const body = [
-      "Demo request details",
-      "",
-      `Name: ${name}`,
-      `Organization: ${organization}`,
-      `Email: ${email}`,
-      `Product: ${product}`,
-      "",
-      "What they want to explore:",
-      `${useCase}`,
-      "",
-      "Next step:",
-      "Reply with the most relevant POC or walkthrough link."
-    ].join("\n");
+    const payload = {
+      name: data.get("name") || "",
+      organization: data.get("organization") || "",
+      email: data.get("email") || "",
+      product: data.get("product") || "",
+      use_case: data.get("use_case") || ""
+    };
 
-    const mailto = `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const note = form.querySelector(".form-note");
+    const originalText = submitButton ? submitButton.textContent : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    if (note) {
+      note.textContent = "Submitting your request...";
+    }
+
+    fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(async (response) => {
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(result.error || "Unable to submit your request.");
+        }
+        form.reset();
+        if (note) {
+          note.textContent =
+            result.message ||
+            "Request received. We will follow up with the right demo or POC link.";
+        }
+      })
+      .catch((error) => {
+        if (note) {
+          note.textContent =
+            error.message ||
+            "We could not submit the request right now. Please try again shortly.";
+        }
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+      });
   });
 });
