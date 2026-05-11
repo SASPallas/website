@@ -146,7 +146,7 @@ p {
 .hero-layout,
 .service-layout,
 .project-spotlight,
-.veeva-hero,
+.veeva-hero-layout,
 .demo-shell,
 .sandbox-grid,
 .story-grid,
@@ -158,7 +158,7 @@ p {
 
 .hero-layout,
 .project-spotlight,
-.veeva-hero {
+.veeva-hero-layout {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: start;
 }
@@ -533,7 +533,7 @@ h3 {
     var(--bg);
 }
 
-.veeva-hero {
+section.veeva-hero {
   padding: 56px 0 24px;
 }
 
