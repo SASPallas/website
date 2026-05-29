@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClimateSensory | Pallas Analytics</title>
+  <meta name="description" content="A climate-to-sensory intelligence prototype for luxury materials, food systems, wine, coffee, vanilla, vetiver, lavender, and perfume raw materials." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../home.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="../index.html">Pallas Analytics</a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">projects</a>
+        <a href="#problem">problem</a>
+        <a href="#prototype">prototype</a>
+        <a href="../index.html#contact">contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero project-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Climate and sensory data</p>
+        <h1>ClimateSensory</h1>
+        <p class="mission">
+          A prototype family for climate risk, sensory quality, and supply-chain intelligence across luxury materials and food systems.
+        </p>
+        <div class="project-meta">
+          <span>Wine, coffee, vanilla, vetiver, lavender, perfume materials</span>
+          <span>Python and Streamlit dashboards</span>
+          <span>Climate, chemistry, sensory, market, and grower signals</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-section" id="problem">
+      <div class="section-label"><p class="eyebrow">01 / Problem</p></div>
+      <div class="project-detail-body">
+        <h2>Climate risk is usually described operationally, but luxury materials fail through quality, sensory, and market effects.</h2>
+        <p>
+          ClimateSensory explores how weather, growing conditions, chemistry, sensory descriptors, supply chains, and market constraints interact. The project asks how a brand or buyer could see risk moving from climate exposure into ingredient quality, substitution pressure, portfolio risk, and sourcing decisions.
+        </p>
+        <div class="project-facts">
+          <article><strong>Quality risk</strong><p>Climate affects aroma, flavor, yield, chemistry, and consistency.</p></article>
+          <article><strong>Supply risk</strong><p>Raw materials face grower, geography, harvest, and sourcing constraints.</p></article>
+          <article><strong>Portfolio risk</strong><p>Brands need to understand correlated exposure across materials and regions.</p></article>
+          <article><strong>Decision risk</strong><p>The dashboard translates signals into sourcing and product questions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-section" id="architecture">
+      <div class="section-label"><p class="eyebrow">02 / Architecture</p></div>
+      <div class="project-detail-body">
+        <h2>A risk propagation engine with material-specific dashboards.</h2>
+        <p>
+          The project includes a shared climate risk propagation engine, material-specific models and dashboards, ingestion playbooks, ontology work, and product specs for coffee, vanilla, vetiver, wine, lavender, and perfume raw materials.
+        </p>
+        <div class="project-facts">
+          <article><strong>Climate layer</strong><p>Daily and monthly climate panels, stress series, and region metadata.</p></article>
+          <article><strong>Sensory layer</strong><p>Descriptors, tasting notes, chemistry-to-quality mappings, and sensory embeddings.</p></article>
+          <article><strong>Market layer</strong><p>Supply-chain, grower, price, quality, and portfolio decision signals.</p></article>
+          <article><strong>Dashboard layer</strong><p>Streamlit dashboards for material-specific exploration.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-section" id="data">
+      <div class="section-label"><p class="eyebrow">03 / Data</p></div>
+      <div class="project-detail-body">
+        <h2>The data model spans climate, chemistry, sensory language, grower context, and material supply chains.</h2>
+        <p>
+          The project contains canonical mapping notes, ontology docs, source strategies, dashboard specs, coffee and vanilla use cases, perfume raw material research, and generated outputs such as climate panels, PCA loadings, risk summaries, forecast files, qualitative corpora, and embedding terms.
+        </p>
+        <div class="path-list">
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/docs/product/raw_material_decision_engine_product_doc.md">Raw material decision engine product doc</a>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/docs/product/coffee_dashboard_spec.md">Coffee dashboard spec</a>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/docs/product/vanilla_decision_use_case.md">Vanilla decision use case</a>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/docs/ingestion/perfume_value_chain_sources.md">Perfume value-chain sources</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-section" id="prototype">
+      <div class="section-label"><p class="eyebrow">04 / Prototype</p></div>
+      <div class="project-detail-body">
+        <h2>The prototypes are local Python and Streamlit dashboards.</h2>
+        <p>
+          The current top-level dashboard is `material_climate_sensory_dashboard_v4.py`. Older folders include wine supply-chain dashboards and material climate sensory dashboards. The exact app should be run locally from the ClimateSensory folder.
+        </p>
+        <div class="path-list">
+          <span>Run locally from `/Users/sonfamily/Documents/SONALI/ClimateSensory` with Streamlit for the dashboard file you want to inspect.</span>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/material_climate_sensory_dashboard_v4.py">Current material dashboard source</a>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/climate_risk_propagation_engine.py">Climate risk propagation engine</a>
+          <a href="file:///Users/sonfamily/Documents/SONALI/ClimateSensory/OLD/wine_climate_supply_chain_v7/README.md">Wine climate supply-chain v7 README</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-section" id="learned">
+      <div class="section-label"><p class="eyebrow">05 / Learned</p></div>
+      <div class="project-detail-body">
+        <h2>The distinctive product angle is climate-to-quality intelligence, not generic climate risk.</h2>
+        <p>
+          The strongest thread is the translation layer between environmental change and material quality: how climate shifts show up in flavor, aroma, chemistry, sensory consistency, substitution pressure, and sourcing decisions.
+        </p>
+        <ul class="plain-list bullet-list">
+          <li>Food and luxury materials need quality-centered risk language, not only logistics language.</li>
+          <li>Ontology work matters because sensory, chemistry, grower, and climate data do not naturally share a schema.</li>
+          <li>The project could become a decision engine for material sourcing, portfolio exposure, and product resilience.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

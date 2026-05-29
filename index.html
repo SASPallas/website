@@ -3,242 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pallas Analytics | Decision Support for Complex Pipelines</title>
+  <title>Pallas Analytics | Research and Prototypes</title>
   <meta
     name="description"
-    content="Pallas Analytics turns fragmented records, communications, process documents, and external signals into live decision systems that help teams track what matters and decide what to do next."
+    content="Pallas Analytics is a personal research and prototype archive exploring regulated AI, publishing intelligence, climate-to-sensory data, and the future of work."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home.css" />
 </head>
-<body class="theme-consulting">
+<body>
   <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">PA</span>
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="Pallas Analytics home">
         <span>Pallas Analytics</span>
       </a>
-      <nav class="nav-links">
-        <a href="#engine">The Engine</a>
-        <a href="#what-the-engine-creates">What It Creates</a>
-        <a href="#why-it-matters">Why It Matters</a>
-        <a href="#products">Use Cases</a>
-        <a href="#request-demo">Request Demo</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <div class="nav-menu">
+          <a href="#projects">projects</a>
+          <div class="nav-dropdown" aria-label="Project pages">
+            <a href="projects/gxp-intelligence.html">Regulated Pipeline CRM</a>
+            <a href="projects/regulatory-sandbox.html">Regulated AI Sandbox</a>
+            <a href="projects/regulatory-models.html">RegulatoryModels Platform</a>
+            <a href="projects/translation-scout.html">Translation Scout</a>
+            <a href="projects/goodreviews.html">Good Reviews</a>
+            <a href="projects/climate-sensory.html">ClimateSensory</a>
+          </div>
+        </div>
+        <a href="#future-work">future of work</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
       </nav>
-      <div class="nav-actions">
-        <a class="btn btn-ghost" href="projects/gxp-intelligence.html">View Use Case</a>
-        <a class="btn btn-primary" href="#request-demo">Request a Demo</a>
-      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow">Pallas Analytics</p>
-          <h1>Track what matters. See what comes next.</h1>
-          <p class="lede">
-            Pallas turns process documents, email threads, chat messages, and external signals into live systems that help teams convert noise into trackable actions and clearer judgment.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#request-demo">Request a Demo</a>
-            <a class="btn btn-secondary" href="#products">Explore Use Cases</a>
-          </div>
-        </div>
+    <section class="hero portfolio-hero" id="mission">
+      <div class="hero-copy">
+        <p class="eyebrow">Research, prototypes, and applied systems</p>
+        <h1>Building small systems to understand large changes.</h1>
+        <p class="mission">
+          Pallas Analytics is my working archive for prototypes at the edge of AI, judgment, data, and institutional change. The projects here are experiments in making complex decisions more visible: regulated model review, GxP execution, publishing intelligence, climate-to-sensory risk, and the future of work.
+        </p>
+      </div>
+    </section>
 
-        <div class="hero-panel statement-card">
-          <div class="statement-top">
-            <h2>Turn process noise into clearer judgment.</h2>
-            <p>
-              Pallas functions like a live decision-support CRM for considerations, milestones, relationships, and next actions. It turns static documents, scattered messages, and fragmented records into a system teams can actually track.
-            </p>
-          </div>
-          <div class="signal-grid">
-            <article>
-              <strong>Track the live pipeline</strong>
-              <p>Keep records, requirements, communications, and external signals in one place so the state of the pipeline is visible instead of implicit.</p>
-            </article>
-            <article>
-              <strong>Support human judgment</strong>
-              <p>The goal is not to automate the decision away. It is to show experts what deserves attention, what is weak, and what to do next.</p>
-            </article>
-          </div>
+    <section class="statement-band" aria-labelledby="archive-title">
+      <div class="section-label">
+        <p class="eyebrow">What this is</p>
+      </div>
+      <div class="statement-copy">
+        <h2 id="archive-title">A landing page for research directions, working prototypes, and the product questions behind them.</h2>
+        <p>
+          The through-line is not a single product. It is a way of working: take an ambiguous domain, build a concrete interface, test what data and architecture can support, and use the prototype to learn what the real problem is.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section" id="projects">
+      <div class="section-intro">
+        <p class="eyebrow">Prototype archive</p>
+        <h2>Projects</h2>
+        <p>
+          Each project page follows the same structure: the problem, architecture, data, prototype, and what the work taught me.
+        </p>
+      </div>
+
+      <div class="project-carousel" aria-label="Prototype projects">
+        <a class="project-card" href="projects/gxp-intelligence.html">
+          <span class="project-number">01</span>
+          <span class="study-meta">regulated operations</span>
+          <strong>Regulated Pipeline CRM</strong>
+          <span>Turns validation plans, requirements, approvals, and operating signals into a live GxP execution pipeline.</span>
+        </a>
+        <a class="project-card" href="projects/regulatory-sandbox.html">
+          <span class="project-number">02</span>
+          <span class="study-meta">regulated AI</span>
+          <strong>Regulated AI Sandbox</strong>
+          <span>A governed model evaluation environment built for reviewability, evidence, and deployment decisions.</span>
+        </a>
+        <a class="project-card" href="projects/regulatory-models.html">
+          <span class="project-number">03</span>
+          <span class="study-meta">platform build</span>
+          <strong>RegulatoryModels Platform</strong>
+          <span>The deeper implementation track for control planes, sandbox runs, evidence packages, and reviewer exports.</span>
+        </a>
+        <a class="project-card" href="projects/translation-scout.html">
+          <span class="project-number">04</span>
+          <span class="study-meta">publishing intelligence</span>
+          <strong>Translation Scout</strong>
+          <span>Moves foreign-market coverage and rights signals into a ranked scouting pipeline.</span>
+        </a>
+        <a class="project-card" href="projects/goodreviews.html">
+          <span class="project-number">05</span>
+          <span class="study-meta">critic intelligence</span>
+          <strong>Good Reviews</strong>
+          <span>Ranks reviewer and critic fit from Goodreads exports, review data, source catalogs, and taste vectors.</span>
+        </a>
+        <a class="project-card" href="projects/climate-sensory.html">
+          <span class="project-number">06</span>
+          <span class="study-meta">climate and sensory data</span>
+          <strong>ClimateSensory</strong>
+          <span>Explores climate, sensory quality, and supply-chain risk for wine, coffee, vanilla, vetiver, lavender, and perfume materials.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="split-section" id="future-work">
+      <div class="section-label">
+        <p class="eyebrow">Future of work</p>
+      </div>
+      <div class="text-column">
+        <h2>Research on apprenticeship, curriculum, and professional agency stays in its own lane.</h2>
+        <p>
+          This work is adjacent to the prototypes, but it has a different purpose. It asks how entry-level work, apprenticeship, judgment, and curriculum should change as AI becomes part of ordinary professional practice.
+        </p>
+        <div class="study-carousel compact-carousel" aria-label="Future of work studies">
+          <a class="study-card" href="studies/entry-level-work-apprenticeship-infrastructure.html">
+            <span class="study-thumb">01</span>
+            <span class="study-meta">working paper</span>
+            <strong>Entry-Level Work Is Apprenticeship Infrastructure</strong>
+            <span>How early-career work teaches judgment, context, and professional agency.</span>
+          </a>
+          <a class="study-card" href="studies/junior-analyst-problem.html">
+            <span class="study-thumb">02</span>
+            <span class="study-meta">working paper</span>
+            <strong>The Junior Analyst Problem</strong>
+            <span>What changes when entry-level analysis is accelerated, automated, or abstracted away.</span>
+          </a>
+          <a class="study-card" href="studies/hidden-curriculum-office-work.html">
+            <span class="study-thumb">03</span>
+            <span class="study-meta">working paper</span>
+            <strong>The Hidden Curriculum of Office Work</strong>
+            <span>The informal skills students learn only after entering professional environments.</span>
+          </a>
+          <a class="study-card" href="studies/ai-apprenticeship-audit.html">
+            <span class="study-thumb">04</span>
+            <span class="study-meta">working paper</span>
+            <strong>The AI Apprenticeship Audit</strong>
+            <span>A framework for where AI supports, weakens, or reshapes learning on the job.</span>
+          </a>
+          <a class="study-card" href="studies/prompt-literacy-professional-agency.html">
+            <span class="study-thumb">05</span>
+            <span class="study-meta">working paper</span>
+            <strong>From Prompt Literacy to Professional Agency</strong>
+            <span>Moving beyond tool fluency toward judgment, authorship, and critical adoption.</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="engine">
-      <div class="container">
-        <div class="section-intro">
-          <p class="section-tag">The Pallas Engine</p>
-          <h2>A live decision-support system for complex pipelines.</h2>
-          <p>
-            Every Pallas product is built on the same engine. It ingests records, process documents, email threads, chat messages, and external signals; maps relationships, milestones, and fit; and helps teams track what matters, flag weaknesses, and act on the next best step.
-          </p>
-        </div>
-        <div class="card-grid card-grid-3">
-          <article class="feature-card">
-            <h3>Ingest</h3>
-            <p>Pull in static documents, email threads, chat messages, and dense source material so critical context stops living in scattered systems.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Signal</h3>
-            <p>Bring in the outside signals that matter, whether they come from regulations, model evaluations, reviewer behavior, or critical response.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Map</h3>
-            <p>Connect relationships, fit, and context so users can see what belongs together, what does not, and why.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Prioritize</h3>
-            <p>Surface what matters next: the next milestone, the right reviewer, the strongest opportunity, or the biggest risk.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Activate</h3>
-            <p>Convert signals from documents, email, and chat into workflows, recommendations, approvals, and trackable next actions.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Human layer</h3>
-            <p>The goal is not to replace the expert. It is to give the expert a clearer roadmap, better context, and stronger judgment.</p>
-          </article>
-        </div>
+    <section class="split-section" id="about">
+      <div class="section-label">
+        <p class="eyebrow">Method</p>
+      </div>
+      <div class="text-column">
+        <h2>Prototype first, then decide what deserves to become a product.</h2>
+        <ul class="plain-list bullet-list">
+          <li>Use research to identify where decision-making is messy, tacit, or trapped in static documents.</li>
+          <li>Build an interface that makes the workflow visible enough to critique.</li>
+          <li>Trace the data sources, assumptions, and gaps instead of hiding them behind a polished demo.</li>
+          <li>Let the prototype reveal what architecture, governance, and product surface the domain actually needs.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="what-the-engine-creates">
-      <div class="container">
-        <div class="section-intro">
-          <p class="section-tag">What It Creates</p>
-          <h2>One engine. Several forms of live pipeline intelligence.</h2>
-          <p>
-            The output is not just a dashboard. It is a working system that turns paper processes, static records, email threads, and chat messages into trackable considerations, requirements, relationships, risks, and next actions.
-          </p>
-        </div>
-        <div class="card-grid card-grid-3">
-          <article class="feature-card">
-            <h3>Live pipeline record</h3>
-            <p>Maintain an active view of entities, stages, communications, and current status instead of stitching context together by hand.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Dynamic milestones</h3>
-            <p>Generate requirements, checkpoints, and evidence needs from process documents or workflow rules when the use case calls for it.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Consideration tracking</h3>
-            <p>Capture what is under review, what is blocked, what looks strong, and what needs more evidence before the team acts.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Fit and weakness signals</h3>
-            <p>Show which titles, reviewers, milestones, or models are aligned and where the pipeline is fragile, noisy, or not ready.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Next-step recommendations</h3>
-            <p>Guide users toward the next best action, whether that is advancing a milestone, escalating a title, or passing on a weak opportunity.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Decision memory</h3>
-            <p>Keep the rationale behind actions, objections, pass reasons, and approvals visible so the system gets smarter over time.</p>
-          </article>
-        </div>
+    <section class="contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Prototype development, research, and applied AI systems.</h2>
       </div>
-    </section>
-
-    <section class="section" id="why-it-matters">
-      <div class="container">
-        <div class="section-intro">
-          <p class="section-tag">Why It Matters</p>
-          <h2>Better systems lead to better decisions.</h2>
-          <p>
-            The hardest workflows are rarely blocked by a lack of data. They are blocked by too much noise, too little structure, and no clear path from information to action. Pallas helps teams move from scattered pipeline fragments to live systems that support better decisions.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="products">
-      <div class="container">
-        <div class="section-intro">
-          <p class="section-tag">Use Cases</p>
-          <h2>Use cases built on the Pallas engine.</h2>
-          <p>
-            The same decision-support system can structure regulated process pipelines and editorial scouting pipelines without changing the core logic underneath.
-          </p>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <h3>Regulated Pipeline CRM</h3>
-            <p>
-              Turn FDA GxP and EU GxP process documents into live milestone workflows with requirements, approvals, evidence checks, and visible progress across a regulated pipeline.
-            </p>
-            <ul class="clean-list">
-              <li>Generate milestones and requirements from FDA GxP and EU GxP source documents</li>
-              <li>Track blockers, approvals, and evidence in one operating view</li>
-              <li>Help teams decide when the pipeline is ready to move forward</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="projects/gxp-intelligence.html">View Dossier</a>
-              <a class="btn btn-secondary" href="#request-demo">Ask for a Demo</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <h3>Translation Scout</h3>
-            <p>
-              Turn foreign critical response, rights signals, and editorial fit into a live scouting pipeline that helps teams decide which books deserve real effort.
-            </p>
-            <ul class="clean-list">
-              <li>Track travel fit, critic overlap, rights state, and next action</li>
-              <li>Organize books from watchlist through rights and submission</li>
-              <li>Support editors and scouts with evidence-backed conviction</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="projects/translation-scout.html">View Dossier</a>
-              <a class="btn btn-secondary" href="#request-demo">Ask for a Demo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="request-demo">
-      <div class="container contact-band contact-band-stack">
-        <div class="contact-copy">
-          <p class="section-tag">Request Demo</p>
-          <h2>Start with the workflow that matters most.</h2>
-          <p>
-            Whether you are managing regulated readiness or scouting translated books, Pallas helps turn pipeline complexity into a clearer decision system. Tell us what you want to explore and we’ll send the right prototype or proof-of-concept link.
-          </p>
-        </div>
-
-        <div class="demo-form">
-          <p class="form-note">
-            Use our intake form to tell us which workflow you want to explore. Responses go directly to Pallas Analytics and help us send the right demo or proof-of-concept link.
-          </p>
-          <div class="form-actions">
-            <a
-              class="btn btn-primary"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSelvtWI7ebm6NZHesZS_3jgnITcpvqO-EGcQhFC_vYqTJtI-Q/viewform?usp=sharing&amp;ouid=114083978106595718140"
-              target="_blank"
-              rel="noreferrer"
-            >Open the Demo Request Form</a>
-            <p class="form-note">The form opens in a new tab.</p>
-          </div>
-        </div>
+      <div class="contact-copy">
+        <p>
+          Reach out to discuss prototype development, research collaborations, curriculum work, or the design of applied AI systems where the hard part is not the model alone, but the judgment around it.
+        </p>
+        <a
+          class="text-link"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSelvtWI7ebm6NZHesZS_3jgnITcpvqO-EGcQhFC_vYqTJtI-Q/viewform?usp=sharing&amp;ouid=114083978106595718140"
+          target="_blank"
+          rel="noreferrer"
+        >Open the contact form</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-row">
-      <p>© 2026 Pallas Analytics</p>
-      <p>Decision support for complex pipelines</p>
-    </div>
+    <p>Pallas Analytics</p>
+    <p>Research and prototype archive.</p>
   </footer>
 </body>
 </html>
