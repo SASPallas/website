@@ -24,21 +24,6 @@
   </header>
 
   <main>
-    <section class="hero project-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Regulated operations</p>
-        <h1>Regulated Pipeline CRM</h1>
-        <p class="mission">
-          A prototype for turning validation plans, requirements, approvals, and operating signals into a live GxP execution pipeline.
-        </p>
-        <div class="project-meta">
-          <span>Formerly the Veeva-oriented prototype direction</span>
-          <span>Website page plus separate working POC</span>
-          <span>GxP, validation, evidence, signals</span>
-        </div>
-      </div>
-    </section>
-
     <section class="project-detail-section" id="problem">
       <div class="section-label"><p class="eyebrow">01 / Problem</p></div>
       <div class="project-detail-body">
@@ -91,9 +76,13 @@
       <div class="project-detail-body">
         <h2>There is both a website case-study page and a local working app.</h2>
         <p>
-          The website page explains the product surface. The working POC in `VeevaNew` includes a browser app, synthetic documents, regulatory rule data, and implementation notes.
+          The website page explains the product surface. The working Control Center includes a browser app, synthetic documents, regulatory rule data, and implementation notes.
         </p>
-        <a class="prototype-link" href="file:///Users/sonfamily/Documents/SONALI/VeevaNew/index.html">Open local VeevaNew prototype</a>
+        <figure class="project-figure">
+          <img src="../assets/gxp-crm-wireframe.svg" alt="Wireframe of the Regulated Pipeline CRM prototype with a milestone tracker, task checklist, evidence panel, and regulatory logic." />
+          <figcaption>Prototype wireframe for the Regulated Pipeline CRM control center.</figcaption>
+        </figure>
+        <a class="prototype-link" href="file:///Users/sonfamily/Documents/SONALI/VeevaNew/index.html">Open local Control Center prototype</a>
         <div class="path-list">
           <a href="../assets/gxp-crm-wireframe.svg">Website wireframe</a>
           <a href="../assets/gxp-crm-wireframe-notes.md">Wireframe notes</a>
@@ -106,14 +95,12 @@
     <section class="project-detail-section" id="learned">
       <div class="section-label"><p class="eyebrow">05 / Learned</p></div>
       <div class="project-detail-body">
-        <h2>The useful product is not document AI. It is execution accountability.</h2>
+        <h2>The useful product is not AI. It was creating structure from severely disjointed and unstructured sources, including email chains and Slack messages, and converting the structure in validation docs into a "process control" skeleton that helped the role of QA within the company by identifying key issues and allowing for better context on when escalations occurred.</h2>
         <p>
           The prototype clarified that the valuable layer is a live operating system for regulated execution. The document extraction matters, but only because it creates a workflow that can be inspected, completed, validated, and explained.
         </p>
         <ul class="plain-list bullet-list">
-          <li>Regulated users need source-linked traceability more than generic summaries.</li>
-          <li>Operational signals are useful only when they remain separate from approved source logic until confirmed.</li>
-          <li>The page should be framed as a case study in accountable execution, not as a single-vendor Veeva replacement.</li>
+          <li>In this case, AI helped us convert static docs into an accountable execution layer.</li>
         </ul>
       </div>
     </section>
@@ -125,7 +112,6 @@
       </div>
       <div class="project-meta">
         <a class="prototype-link" href="regulatory-sandbox.html">Regulated AI Sandbox</a>
-        <a class="prototype-link" href="regulatory-models.html">RegulatoryModels Platform</a>
       </div>
     </section>
   </main>

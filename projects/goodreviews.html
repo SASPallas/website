@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Good Reviews | Pallas Analytics</title>
-  <meta name="description" content="A critic and reviewer intelligence prototype built from Goodreads exports, review sources, critic corpora, and taste vectors." />
+  <meta name="description" content="A critic and reviewer intelligence prototype built from industry taste data, review sources, critic corpora, and taste vectors." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -29,13 +29,8 @@
         <p class="eyebrow">Critic intelligence</p>
         <h1>Good Reviews</h1>
         <p class="mission">
-          A local web prototype that imports Goodreads taste data, review sources, critic corpora, and vector artifacts to rank reviewer and critic fit.
+          A local web prototype that imports industry taste data, review sources, critic corpora, and vector artifacts to rank reviewer and critic fit.
         </p>
-        <div class="project-meta">
-          <span>Working local web app</span>
-          <span>Reviewer fit and taste modeling</span>
-          <span>Foundation for Critic CRM and Translation Scout</span>
-        </div>
       </div>
     </section>
 
@@ -47,7 +42,7 @@
           The prototype asks how personal taste, trusted publications, award signals, critic histories, and review text can be turned into a practical fit score. It began as a way to rank reviewers whose reviewed books line up with a reader's strongest preferences, then expanded toward publishing use cases.
         </p>
         <div class="project-facts">
-          <article><strong>Taste signal</strong><p>Goodreads exports provide a personal map of books, ratings, shelves, and reviews.</p></article>
+          <article><strong>Taste signal</strong><p>Industry exports provide a map of books, ratings, shelves, and reviews.</p></article>
           <article><strong>Source quality</strong><p>Seeded review outlets create a controlled critic universe.</p></article>
           <article><strong>Reviewer fit</strong><p>The app scores overlap across books, authors, shelves, genres, sentiment, and prizes.</p></article>
           <article><strong>Publishing bridge</strong><p>The same engine points toward Critic CRM and Translation Scout.</p></article>
@@ -60,10 +55,10 @@
       <div class="project-detail-body">
         <h2>A local data pipeline plus browser app.</h2>
         <p>
-          Good Reviews combines Python ingestion scripts, CSV and JSON artifacts, a local static web app, vector-building utilities, source catalogs, and evaluation docs. It can ingest Goodreads exports, load review data, build critic corpora, and present reviewer rankings in the browser.
+          The prototype combines Python ingestion scripts, CSV and JSON artifacts, a local static web app, vector-building utilities, source catalogs, and evaluation docs. It can ingest industry exports, load review data, build critic corpora, and present reviewer rankings in the browser.
         </p>
         <div class="project-facts">
-          <article><strong>Ingestion</strong><p>Processes Goodreads CSV and review source data.</p></article>
+          <article><strong>Ingestion</strong><p>Processes industry CSV and review source data.</p></article>
           <article><strong>Corpus build</strong><p>Builds normalized critic-review artifacts.</p></article>
           <article><strong>Vector layer</strong><p>Stores book, review, and reviewer vector artifacts.</p></article>
           <article><strong>Web UI</strong><p>Local app surfaces reviewer fit, source status, and model evaluation data.</p></article>
@@ -76,7 +71,7 @@
       <div class="project-detail-body">
         <h2>The data combines personal reading history, review corpora, outlet metadata, awards, and generated vectors.</h2>
         <p>
-          The prototype includes sample Goodreads data, Book Marks-style review data, scraped review CSVs, source metadata, critic corpus summaries, reviewer tracking, awards catalogs, and vector artifact files.
+          The prototype includes sample industry taste data, Book Marks-style review data, scraped review CSVs, source metadata, critic corpus summaries, reviewer tracking, awards catalogs, and vector artifact files.
         </p>
         <div class="path-list">
           <a href="file:///Users/sonfamily/Documents/SONALI/Goodreviews/README.md">Good Reviews README</a>
@@ -90,23 +85,16 @@
     <section class="project-detail-section" id="prototype">
       <div class="section-label"><p class="eyebrow">04 / Prototype</p></div>
       <div class="project-detail-body">
-        <h2>The app is playable locally.</h2>
-        <p>
-          The README recommends running `python3 serve.py` from the Goodreviews folder and opening `http://127.0.0.1:8000`. The static app file can also be opened directly for a quick look.
-        </p>
-        <a class="prototype-link" href="file:///Users/sonfamily/Documents/SONALI/Goodreviews/web/index.html">Open local Good Reviews app</a>
-        <div class="path-list">
-          <span>Run locally: `cd /Users/sonfamily/Documents/SONALI/Goodreviews` then `python3 serve.py`</span>
-          <a href="file:///Users/sonfamily/Documents/SONALI/Goodreviews/PRODUCT_BRIEFS.md">Product briefs</a>
-          <a href="file:///Users/sonfamily/Documents/SONALI/Goodreviews/EVALUATION_HARNESS.md">Evaluation harness</a>
-        </div>
+        <figure class="project-figure">
+          <img src="../assets/translation-scout-wireframe.svg" alt="Wireframe of the review intelligence prototype showing lists, ranked titles, and an editorial recommendation panel." />
+        </figure>
       </div>
     </section>
 
     <section class="project-detail-section" id="learned">
       <div class="section-label"><p class="eyebrow">05 / Learned</p></div>
       <div class="project-detail-body">
-        <h2>Review intelligence becomes more useful when it explains fit, not popularity.</h2>
+        <h2>Personalization and recommendation engines that explain fit and do not veer toward popularity in a generic manner</h2>
         <p>
           The prototype showed that the interesting product surface is not a generic recommendation feed. It is a fit-and-evidence system: why this reviewer, why this source, why this title, and what should someone do with that information.
         </p>

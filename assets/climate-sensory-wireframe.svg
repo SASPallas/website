@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ClimateSensory dashboard wireframe</title>
+  <desc id="desc">A wireframe of a climate and sensory risk dashboard with material filters, climate signals, sensory quality indicators, supply chain exposure, and decision notes.</desc>
+  <rect width="1200" height="760" fill="#fbfaf6"/>
+  <rect x="52" y="48" width="1096" height="664" fill="#f7f5f1" stroke="#d7cec0"/>
+  <text x="84" y="92" fill="#171716" font-family="Georgia, serif" font-size="34">ClimateSensory</text>
+  <text x="84" y="126" fill="#706a60" font-family="Arial, sans-serif" font-size="15">Material risk propagation dashboard</text>
+
+  <rect x="84" y="162" width="210" height="520" fill="#ece6db" stroke="#d7cec0"/>
+  <text x="112" y="204" fill="#6f2528" font-family="Arial, sans-serif" font-size="13" font-weight="700">MATERIALS</text>
+  <rect x="112" y="232" width="150" height="34" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="126" y="254" fill="#30302d" font-family="Arial, sans-serif" font-size="14">Coffee</text>
+  <rect x="112" y="284" width="150" height="34" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="126" y="306" fill="#30302d" font-family="Arial, sans-serif" font-size="14">Vanilla</text>
+  <rect x="112" y="336" width="150" height="34" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="126" y="358" fill="#30302d" font-family="Arial, sans-serif" font-size="14">Vetiver</text>
+  <rect x="112" y="388" width="150" height="34" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="126" y="410" fill="#30302d" font-family="Arial, sans-serif" font-size="14">Lavender</text>
+  <text x="112" y="478" fill="#6f2528" font-family="Arial, sans-serif" font-size="13" font-weight="700">REGION</text>
+  <rect x="112" y="506" width="150" height="34" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="126" y="528" fill="#30302d" font-family="Arial, sans-serif" font-size="14">Origin cluster</text>
+
+  <rect x="330" y="162" width="470" height="250" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="360" y="204" fill="#171716" font-family="Georgia, serif" font-size="25">Climate signals</text>
+  <polyline points="370,344 440,318 510,330 580,274 650,292 730,228" fill="none" stroke="#6f2528" stroke-width="5"/>
+  <line x1="370" y1="360" x2="740" y2="360" stroke="#d7cec0"/>
+  <line x1="370" y1="238" x2="370" y2="360" stroke="#d7cec0"/>
+  <text x="360" y="386" fill="#706a60" font-family="Arial, sans-serif" font-size="14">Heat, rainfall, drought, and harvest stress</text>
+
+  <rect x="830" y="162" width="288" height="250" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="860" y="204" fill="#171716" font-family="Georgia, serif" font-size="25">Sensory quality</text>
+  <circle cx="902" cy="292" r="54" fill="none" stroke="#4c513e" stroke-width="16"/>
+  <circle cx="1010" cy="292" r="54" fill="none" stroke="#a29584" stroke-width="16"/>
+  <text x="879" y="299" fill="#30302d" font-family="Arial, sans-serif" font-size="18">82</text>
+  <text x="987" y="299" fill="#30302d" font-family="Arial, sans-serif" font-size="18">64</text>
+  <text x="860" y="386" fill="#706a60" font-family="Arial, sans-serif" font-size="14">Aroma, flavor, chemistry, consistency</text>
+
+  <rect x="330" y="442" width="332" height="240" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="360" y="484" fill="#171716" font-family="Georgia, serif" font-size="25">Supply exposure</text>
+  <rect x="360" y="528" width="230" height="18" fill="#ece6db"/>
+  <rect x="360" y="528" width="184" height="18" fill="#6f2528"/>
+  <rect x="360" y="572" width="230" height="18" fill="#ece6db"/>
+  <rect x="360" y="572" width="128" height="18" fill="#4c513e"/>
+  <rect x="360" y="616" width="230" height="18" fill="#ece6db"/>
+  <rect x="360" y="616" width="206" height="18" fill="#a29584"/>
+
+  <rect x="692" y="442" width="426" height="240" fill="#fbfaf6" stroke="#d7cec0"/>
+  <text x="722" y="484" fill="#171716" font-family="Georgia, serif" font-size="25">Decision notes</text>
+  <text x="722" y="532" fill="#30302d" font-family="Arial, sans-serif" font-size="15">• Flag correlated regional exposure</text>
+  <text x="722" y="570" fill="#30302d" font-family="Arial, sans-serif" font-size="15">• Compare substitution pressure</text>
+  <text x="722" y="608" fill="#30302d" font-family="Arial, sans-serif" font-size="15">• Track sensory degradation risk</text>
+  <text x="722" y="646" fill="#30302d" font-family="Arial, sans-serif" font-size="15">• Prepare sourcing recommendation</text>
+</svg>
