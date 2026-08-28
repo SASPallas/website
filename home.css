@@ -217,6 +217,15 @@ h3 {
   line-height: 1.68;
 }
 
+.mission-list {
+  max-width: 900px;
+  margin: -12px 0 0;
+  padding-left: 1.4rem;
+  color: var(--charcoal);
+  font-size: clamp(1rem, 1.15vw, 1.18rem);
+  line-height: 1.68;
+}
+
 .statement-band,
 .split-section,
 .audience-section,
